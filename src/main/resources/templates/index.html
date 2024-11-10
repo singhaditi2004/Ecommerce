@@ -3,13 +3,56 @@
 
 <head>
 	<meta charset="ISO-8899-1" />
+	<link rel="stylesheet" href="/css/style.css">
+
 	<title>Index</title>
 </head>
 
 <body>
 	<section>
-		<h1>Index</h1>
+		<!--Slider start-->
+		<div id="carouselExample" class="carousel slide">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="https://img.freepik.com/free-vector/online-shopping-concept-illustration_114360-1084.jpg?t=st=1731085083~exp=1731088683~hmac=143d1548bcd41a84ea34e9eca223bdd66fe290bb19705ccfb0cd3dcd1ae75882&w=740"
+						class="d-block w-100" alt="..." height="350px">
+				</div>
+				<div class="carousel-item">
+					<img src="https://img.freepik.com/free-vector/grocery-promotion-concept-illustration_114360-18712.jpg?t=st=1731085184~exp=1731088784~hmac=99658899693f0c1f7014259158d0a33dcb40af0742747434813c60bb915a588a&w=740"
+						class="d-block w-100" alt="..." height="350px">
+				</div>
+				<div class="carousel-item">
+					<img src="https://img.freepik.com/free-vector/isometric-e-commerce-concept-style_23-2148569257.jpg?t=st=1731085327~exp=1731088927~hmac=58c6904f60f7f13b27d637c7799b3295fb65ff0de659a4f8a2f865189245108e&w=740"
+						class="d-block w-100" alt="..." height="350px">
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+		<!--Slider end-->
+		
+		<!--Category start-->
+		<div class="container">
+					<div class="row">
+						<p class="text-center fs-4">Category</p>
+						<div class="col-md-2" th:each="c:${category}">
+							<div
+								class="card rounded-circle shadow-sm p-3 mb-5 bg-body-tertiary rounded ">
+								<div class="card-body text-center">
+									<img th:src="@{'img/category_img/'+${c.imageName}}" width="65%" height="140px"><br>
+									<a th:href="@{'/products?category='+${c.name}}" class="text-decoration-none">[[${c.name}]]</a>
+								</div>
+							</div>
+						</div>
+		<!--Category end-->
 	</section>
+
 </body>
 
 </html>
