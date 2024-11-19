@@ -2,50 +2,109 @@
 <html lang="en" xmlns:th="http://www.thymeLeaf.org" th:replace="~{base::layout(~{::section})}">
 
 <head>
-	<meta charset="ISO-8859-1" />
-	<title>login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        /* Custom styles */
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 900px;
+        }
+
+        .login-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .text-link {
+            color: #007bff;
+        }
+
+        .text-link:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+		.custom-margin-top {
+		       margin-top: 180px; /* Adjust the value to your preference */
+		   }
+    </style>
 </head>
 
 <body>
-	<section>
-		<div class="container mt-5 p-5 shadow p-3 mb-5 bg-body-tertiary rounded">
-			<div class="row">
-				<div class="col-md-6 shadow-sm p-3 mb-5 bg-body-tertiary rounded  p-5">
+    <section>
+		<div class="container bg-white p-5 rounded-4 shadow custom-margin-top">
+            <div class="row align-items-center">
+                <!-- Image Section -->
+                <div class="col-md-6 image-container mb-4 mb-md-0">
+                    <img src="https://www.kindpng.com/picc/m/732-7329685_e-commerce-website-background-image-e-commerce-website.png"
+                        alt="E-commerce" class="img-fluid rounded-3">
+                </div>
 
-					<img src="https://www.kindpng.com/picc/m/732-7329685_e-commerce-website-background-image-e-commerce-website.png"
-						alt="E-commerce" height="620px" width="620px">
-				</div>
-				<div class="col-md-6 mt-5 p-5 ">
-					<div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
-						<div class="card-header ">
-							<p class="fs-4 text-center">Login</p>
-						</div>
-						<div class="card-body">
-							<form>
-								<div class="mb-3">
-									<label class="form-label">Email</label>
-									<input class="form-control" name="email" type="email" />
-								</div>
-								<div class="mb-3">
-									<label class="form-label">Password</label>
-									<input class="form-control" name="password" type="password" />
-								</div>
-								<button type="submit" class="btn col-md-12 text-white bg-primary"> Login</button>
-							</form>
-						</div>
-						<div class="card-footer text-center">
-							<a href="#" class="text-decoration-none">Forgot Password</a><br/>
-							Don't have an account 
-							<a href="#" class="text-decoration-none">Create Account</a>
-						     
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+                <!-- Login Form Section -->
+                <div class="col-md-6">
+                    <div class="card p-4">
+                        <div class="card-header text-center mb-3">
+                            <h3 class="fw-bold">Login</h3>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="mb-4">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input class="form-control" id="email" name="email" type="email"
+                                        placeholder="Enter your email" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input class="form-control" id="password" name="password" type="password"
+                                        placeholder="Enter your password" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 py-2">Login</button>
+                            </form>
+                        </div>
+                        <div class="card-footer text-center mt-3">
+                            <a href="#" class="text-decoration-none text-link">Forgot Password?</a>
+                            <p class="mt-2 mb-0">Don't have an account? <a href="#"
+                                    class="text-decoration-none text-link">Create Account</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	</section>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

@@ -1,17 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org" th:replace="~{base::layout(~{::section})}">
 
 <head>
-	<meta charset="ISO-8899-1" />
-	<title>resiter</title>
-</head>  
+    <meta charset="ISO-8859-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        /* Custom styles */
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 950px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .text-link {
+            color: #007bff;
+        }
+
+        .text-link:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        /* Adjusting margins for better spacing */
+        .custom-margin-top {
+            margin-top: 50px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .image-container img {
+                width: 100%;
+                height: auto;
+            }
+        }
+		/* Add a margin-top to the section to prevent the card from being hidden */
+		.custom-margin-top {
+		    margin-top: 100em; /* Increase the value if necessary */
+		}
+
+    </style>
+</head>
 
 <body>
-	<section>
-		<h1>register</h1>
-		<img src="https://www.kindpng.com/picc/m/248-2484415_nerb-ecommerce-development-ecommerce-illustration-png-transparent-png.png" alt="Nerb - Ecommerce Development - Ecommerce Illustration Png, Transparent Png@kindpng.com">
-	</section>
+    <section class="custom-margin-top">
+        <div class="container bg-white p-5 rounded-4 shadow custom-margin-top">
+            <div class="row g-5">
+                <!-- Image Section -->
+                <div class="col-md-6 image-container">
+                    <img src="https://www.kindpng.com/picc/m/732-7329685_e-commerce-website-background-image-e-commerce-website.png"
+                        alt="E-commerce" class="img-fluid rounded-3 shadow-sm">
+                </div>
 
+                <!-- Registration Form Section -->
+                <div class="col-md-6">
+                    <div class="card p-4">
+                        <div class="card-header text-center mb-3">
+                            <h3 class="fw-bold">Register</h3>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <label class="form-label">Full Name</label>
+                                        <input class="form-control" name="name" type="text" placeholder="Enter full name" required>
+                                    </div>
+                                    <div class="col">
+                                        <label class="form-label">Mobile Number</label>
+                                        <input class="form-control" name="mobileNumber" type="tel" placeholder="Enter mobile number" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Email</label>
+                                    <input class="form-control" name="emailId" type="email" placeholder="Enter email address" required>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <label class="form-label">Address</label>
+                                        <input class="form-control" name="address" type="text" placeholder="Enter address" required>
+                                    </div>
+                                    <div class="col">
+                                        <label class="form-label">City</label>
+                                        <input class="form-control" name="city" type="text" placeholder="Enter city" required>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <label class="form-label">State</label>
+                                        <input class="form-control" name="state" type="text" placeholder="Enter state" required>
+                                    </div>
+                                    <div class="col">
+                                        <label class="form-label">Pin Code</label>
+                                        <input class="form-control" name="pincode" type="number" placeholder="Enter pin code" required>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <label class="form-label">Password</label>
+                                        <input class="form-control" name="password" type="password" placeholder="Enter password" required>
+                                    </div>
+                                    <div class="col">
+                                        <label class="form-label">Confirm Password</label>
+                                        <input class="form-control" name="confirmPassword" type="password" placeholder="Confirm password" required>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label">Profile Image</label>
+                                    <input class="form-control" name="profileimage" type="file" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 py-2">Register</button>
+                            </form>
+                        </div>
+                        <div class="card-footer text-center mt-3">
+                            <p class="mb-0">Already have an account? <a href="/login" class="text-decoration-none text-link">Login</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
